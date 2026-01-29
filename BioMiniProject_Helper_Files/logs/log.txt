@@ -22,3 +22,27 @@ path:Thu Jan 29 08:16:12 UTC 2026
    27  ./scripts/copy_and_rename.sh archive/archive.tar.gz archive/archive_copy.tar.gz
    28  touch scripts/py{1..3}.py
    29  history 10 >> logs/log.txt
+Enter temperature in Fahrenheit: Error: Please enter a valid number
+REPOSITORY       TAG       IMAGE ID       CREATED         SIZE
+temp-converter   1.0       8fadae2075bb   2 minutes ago   124MB
+4048a938d362   temp-converter:1.0   "python temp_convert…"   3 minutes ago   Exited (0) 3 minutes ago             affectionate_bohr
+3e59264e7f29   temp-converter:1.0   "python temp_convert…"   4 minutes ago   Exited (0) 3 minutes ago             goofy_nightingale
+Enter temperature in Fahrenheit: 
+Error: Please enter a valid number
+Enter temperature in Fahrenheit: 23.0°F = -5.00°C
+Result saved to /app/logs/conversions.txt
+   40  docker images
+   41  docker images >> logs/log.txt
+   42  docker run -it temp-converter:1.0
+   43  docker ps -a
+   44  docker ps -a | grep "temp-converter:1.0" 
+   45  docker ps -a | grep "temp-converter:1.0" >> logs/log.txt
+   46  docker build -t temp-converter:2.0 .
+   47  docker run -it -v "$(pwd)/logs:/app/logs" temp-converter:2.0
+   48  31
+   49  docker run -it -v "$(pwd)/logs:/app/logs" temp-converter:2.0
+   50  docker run -it -v "$(pwd)/logs:/app/logs" temp-converter:2.0 >> logs/log.txt
+   51  docker run -it -v "$(pwd)/logs:/app/logs" temp-converter:2.0 23 >> logs/log.txt
+   52  echo "23" | docker run -i -v "$(pwd)/logs:/app/logs" temp-converter:2.0 >> logs/log.txt
+   53  history15 >> logs/log.txt
+   54  history 15 >> logs/log.txt
